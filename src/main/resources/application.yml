@@ -5,12 +5,12 @@ spring:
       - id: ms-users
         uri: lb://ms-users
         predicates:
-          - Path=/api/users/**
+          - Path=/ms-users/**
         filters:
-          - StripPrefix=2
+          - StripPrefix=1
       - id: ms-accounts
         uri: lb://ms-accounts
         predicates:
-          - Path=/api/accounts/**
+          - Path=/ms-accounts/**
         filters:
-          - StripPrefix=2
+          - StripPrefix=1
