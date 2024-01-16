@@ -14,3 +14,9 @@ spring:
           - Path=/ms-accounts/**
         filters:
           - StripPrefix=1
+      - id: ms-payments
+        uri: lb://ms-payments
+        predicates:
+          - Path=/ms-payments/**
+        filters:
+          - StripPrefix=1
