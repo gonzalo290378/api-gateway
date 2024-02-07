@@ -20,3 +20,9 @@ spring:
           - Path=/ms-payments/**
         filters:
           - StripPrefix=1
+      - id: auth-server
+        uri: lb://auth-server
+        predicates:
+          - Path=/auth-server/**
+        filters:
+          - StripPrefix=1
