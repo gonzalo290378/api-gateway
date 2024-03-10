@@ -26,3 +26,9 @@ spring:
           - Path=/auth-server/**
         filters:
           - StripPrefix=1
+      - id: ms-queue
+        uri: lb://ms-queue
+        predicates:
+          - Path=/ms-queue/**
+        filters:
+          - StripPrefix=1
